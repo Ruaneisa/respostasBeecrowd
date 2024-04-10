@@ -1,0 +1,22 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        int distanciaPercorrida;
+        double combustivelGasto;
+
+        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+        DecimalFormat format = new DecimalFormat("0.000");
+        distanciaPercorrida = input.nextInt();
+        combustivelGasto = input.nextDouble();
+        double consumoMedio = distanciaPercorrida/combustivelGasto;
+
+        System.out.println(format.format(consumoMedio) + " km/l");
+
+    }
+}
