@@ -1,0 +1,21 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        int A,B,C;
+
+        Scanner input = new Scanner(System.in);
+        String frase = input.nextLine();
+        String[] palavra = frase.split(" ");
+        A = Integer.parseInt(palavra[0]);
+        B = Integer.parseInt(palavra[1]);
+        C = Integer.parseInt(palavra[2]);
+        int MaiorAB = (A+B+Math.abs(A-B))/2;
+        int Maior = (C+MaiorAB+Math.abs(C-MaiorAB))/2;
+
+        System.out.println(Maior + " eh o maior");
+
+    }
+}
