@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        int number, horas;
+        double valor, salary;
+
+        Locale.setDefault(Locale.US);
+        DecimalFormat format = new DecimalFormat("000.00");
+        Scanner input = new Scanner(System.in);
+        number = input.nextInt();
+        horas = input.nextInt();
+        valor = input.nextDouble();
+
+        salary = valor*horas;
+        System.out.println("NUMBER = " + number);
+        System.out.println("SALARY = U$ " + format.format(salary));
+
+    }
+}
