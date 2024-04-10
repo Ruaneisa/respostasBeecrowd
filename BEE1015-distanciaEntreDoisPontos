@@ -1,0 +1,30 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        double X1,X2,Y1,Y2;
+
+        Locale.setDefault(Locale.US);
+        DecimalFormat format = new DecimalFormat("0.0000");
+        Scanner input = new Scanner(System.in);
+
+        String frase = input.nextLine();
+        String[] palavra = frase.split(" ");
+        X1 = Double.parseDouble(palavra[0]);
+        Y1 = Double.parseDouble(palavra[1]);
+
+        String frase2 = input.nextLine();
+        String[] palavra2 = frase2.split(" ");
+        X2 = Double.parseDouble(palavra2[0]);
+        Y2 = Double.parseDouble(palavra2[1]);
+
+        double distanciaEntreDoisPontos = Math.sqrt(Math.pow(X2-X1,2)+Math.pow(Y2-Y1,2));
+
+        System.out.println(format.format(distanciaEntreDoisPontos));
+
+    }
+}
