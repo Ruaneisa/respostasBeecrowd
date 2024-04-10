@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        int quantidadePrimeiraPeca, quantidadeSegundaPeca;
+        double valorPrimeiraPeca, valorSegundaPeca;
+
+        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+        DecimalFormat format = new DecimalFormat("00.00");
+
+        String palavra = input.nextLine();
+        String[] primeiraFrase = palavra.split(" ");
+        quantidadePrimeiraPeca = Integer.parseInt(primeiraFrase[1]);
+        valorPrimeiraPeca = Double.parseDouble(primeiraFrase[2]);
+
+        String palavra2 = input.nextLine();
+        String[] segundaFrase = palavra2.split(" ");
+        quantidadeSegundaPeca = Integer.parseInt(segundaFrase[1]);
+        valorSegundaPeca = Double.parseDouble(segundaFrase[2]);
+
+        double valorPagar = quantidadePrimeiraPeca*valorPrimeiraPeca + (quantidadeSegundaPeca*valorSegundaPeca);
+
+        System.out.println("VALOR A PAGAR: R$ " + format.format(valorPagar));
+
+    }
+}
