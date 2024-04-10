@@ -1,0 +1,21 @@
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        Double A, B, C, MEDIA;
+        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+        A = input.nextDouble();
+        B = input.nextDouble();
+        C = input.nextDouble();
+
+        if ((A>=0 || A<=10) && (B>=0 || B<=10) && (C>=0 || C<=0)){
+            MEDIA = ((A * 2) + (B * 3) + (C * 5)) / 10;
+            System.out.printf("MEDIA = %.1f\n", MEDIA);
+        }
+
+    }
+}
