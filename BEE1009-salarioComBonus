@@ -1,0 +1,23 @@
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        String nome;
+        double salary, vendas, total;
+
+        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+        DecimalFormat format = new DecimalFormat("000.00");
+        nome = input.nextLine();
+        salary = input.nextDouble();
+        vendas = input.nextDouble();
+
+        total = (salary+vendas)-(vendas*0.85);
+        System.out.println("TOTAL = R$ " + format.format(total));
+
+    }
+}
